@@ -1,6 +1,7 @@
 use std::io;
 
-const CELSIUS_FAHR_FACTOR: f64 = 1.8;
+const CELSIUS_FAHR_FACTOR: f64 = 9.0 / 5.0;
+const FAHR_CELSIUS_FACTOR: f64 = 5.0 / 9.0;
 const TEMP_DELTA: u32 = 32;
 
 fn main() {
@@ -38,5 +39,5 @@ fn celsius_to_fahrenheit(celcius_temp: u32) -> f64 {
 }
 
 fn fahrenheit_to_celsius(fahrenheit_temp: u32) -> f64 {
-    f64::from(fahrenheit_temp - TEMP_DELTA) * CELSIUS_FAHR_FACTOR
+    f64::from(fahrenheit_temp - TEMP_DELTA) * FAHR_CELSIUS_FACTOR
 }
